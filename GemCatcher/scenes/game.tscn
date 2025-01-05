@@ -17,3 +17,4 @@ speed = 150.0
 
 [node name="Paddle" parent="." instance=ExtResource("2_kk6go")]
 position = Vector2(576, 590)
+speed = 200.0
