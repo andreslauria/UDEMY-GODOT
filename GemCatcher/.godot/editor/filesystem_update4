@@ -1,4 +1,6 @@
-res://scenes/paddle.tscn
-res://scenes/paddle.gd
 res://scenes/game.tscn
+res://scenes/paddle.tscn
 res://scenes/gem.tscn
+res://scenes/paddle.gd
+res://scenes/gem.gd
+res://scenes/game.gd

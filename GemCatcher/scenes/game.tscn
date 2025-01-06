@@ -1,20 +1,43 @@
-[gd_scene load_steps=4 format=3 uid="uid://dj3ibdunbbelq"]
+[gd_scene load_steps=7 format=3 uid="uid://dj3ibdunbbelq"]
 
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_aeqk5"]
 [ext_resource type="Texture2D" uid="uid://412b834l8iij" path="res://assets/GameBg.png" id="1_r38dg"]
 [ext_resource type="PackedScene" uid="uid://b00653f3d5e56" path="res://scenes/gem.tscn" id="2_hvybu"]
 [ext_resource type="PackedScene" uid="uid://b70pv6usexh8c" path="res://scenes/paddle.tscn" id="2_kk6go"]
+[ext_resource type="AudioStream" uid="uid://dqe5akc506gr" path="res://assets/bgm_action_5.mp3" id="5_hweb2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_c1ixr"]
+font_size = 48
+font_color = Color(0.00305844, 0.675074, 4.23551e-06, 1)
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_aeqk5")
+gem_scene = ExtResource("2_hvybu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(583, 323)
 scale = Vector2(0.65, 0.65)
 texture = ExtResource("1_r38dg")
 
-[node name="Gem" parent="." instance=ExtResource("2_hvybu")]
-position = Vector2(314, 212)
-speed = 150.0
-
 [node name="Paddle" parent="." instance=ExtResource("2_kk6go")]
 position = Vector2(576, 590)
-speed = 200.0
+
+[node name="Label" type="Label" parent="."]
+offset_right = 94.0
+offset_bottom = 47.0
+text = "0"
+label_settings = SubResource("LabelSettings_c1ixr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_hweb2")
+volume_db = -18.0
+autoplay = true
+
+[connection signal="area_entered" from="Paddle" to="." method="_on_paddle_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
