@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1736481658
+::res://::1736653108
 icon.svg::CompressedTexture2D::4264463423295512358::1736481439::1736481439::1::::<><>::
 ::res://assets/::1736481439
 ::res://assets/audio/::1736481439
@@ -23,6 +23,11 @@ laser2.png::CompressedTexture2D::1861495562383912759::1736481439::1736481439::1:
 pipe.png::CompressedTexture2D::7108393597462197578::1736481439::1736481439::1::::<><>::
 ::res://assets/plane/::1736481439
 planes_sheet.png::CompressedTexture2D::1240451175840878083::1736481439::1736481439::1::::<><>::
-::res://scenes/::1736481637
-::res://scenes/Game/::1736481639
-game.tscn::PackedScene::4364462450518176335::1736481639::0::1::::<><>::
+::res://scenes/::1736653737
+::res://scenes/barrier/::1736653724
+barrier.tscn::PackedScene::3392317799717312776::1736653724::0::1::::<><>::
+::res://scenes/game/::1736653339
+game.tscn::PackedScene::4364462450518176335::1736653743::0::1::::<><>::uid://hejjb4b2h2fr::::res://assets/background/rocks_2.png<>uid://cc0l8dyki6xna::::res://scenes/game/plane.tscn
+plane.gd::GDScript::-1::1736653331::0::1::::<>CharacterBody2D<>::
+plane.tscn::PackedScene::4965555511744700750::1736653743::0::1::::<><>::uid://rw5bxm2t7cop::::res://assets/plane/planes_sheet.png<>res://scenes/game/plane.gd
+::res://scenes/plane/::1736653737
