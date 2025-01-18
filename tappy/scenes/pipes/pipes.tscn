@@ -8,8 +8,6 @@
 [node name="Pipes" type="Node2D"]
 script = ExtResource("1_i6hsp")
 
-[node name="laser" parent="." instance=ExtResource("2_s1x5x")]
-
 [node name="Upper" parent="." instance=ExtResource("1_av7j6")]
 position = Vector2(0, -80)
 rotation = 3.14159
@@ -17,10 +15,16 @@ rotation = 3.14159
 [node name="Lower" parent="." instance=ExtResource("1_av7j6")]
 position = Vector2(0, 80)
 
+[node name="laser" parent="." instance=ExtResource("2_s1x5x")]
+z_index = -1
+
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 position = Vector2(58, 0)
 
 [node name="ScoreSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_0lefr")
 
+[connection signal="body_entered" from="Upper" to="." method="_on_pipe_body_entered"]
+[connection signal="body_entered" from="Lower" to="." method="_on_pipe_body_entered"]
+[connection signal="body_entered" from="laser" to="." method="_on_laser_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="on_screen_exited"]
