@@ -8,6 +8,7 @@ class_name Tappy
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var sound: AudioStreamPlayer2D = $Sound
 
 
 const GRAVITY: float = 1000
@@ -31,5 +32,6 @@ func fly() -> void:
 func die()-> void:
 	set_physics_process(false)
 	animated_sprite_2d.stop()
+	sound.stop()
 	#traigo la signal desde el singleton
 	SignalManager.on_plane_died.emit()

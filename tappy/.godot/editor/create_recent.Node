@@ -1,3 +1,9 @@
+Node2D
+Sprite2D
+Parallax2D
+AudioStreamPlayer2D
+ParallaxLayer
+ParallaxBackground
 Label
 CanvasLayer
 AudioStreamPlayer
@@ -7,8 +13,3 @@ Control
 BoxContainer
 HBoxContainer
 AnimationPlayer
-TextureRect
-Node
-Marker2D
-AudioStreamPlayer2D
-VisibleOnScreenNotifier2D

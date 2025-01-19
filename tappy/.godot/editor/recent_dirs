@@ -1,3 +1,6 @@
+res://scenes/Parallax2D
+res://scenes/scrolling_layer
+res://scenes/scrollingBg
 res://assets
 res://singletons
 res://scenes/hud
