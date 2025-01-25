@@ -1,0 +1,5 @@
+res://Scenes/Tester/tester.tscn
+res://Scenes/Tester/bird_2.gd
+res://Scenes/Level/level.tscn
+res://Scenes/Water/water.tscn
+res://Scenes/Water/water.gd

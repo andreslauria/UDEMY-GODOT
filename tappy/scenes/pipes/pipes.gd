@@ -5,6 +5,7 @@ class_name Pipes
 
 const OFF_SCREEN: float = -500.0
 @onready var score_sound: AudioStreamPlayer2D = $ScoreSound
+@onready var von: VisibleOnScreenNotifier2D = $VisibleOnScreenNotifier2D
 
 
 func _ready() -> void:
@@ -16,12 +17,12 @@ func _process(delta: float) -> void:
 
 
 func check_off_screen() -> void:
-	if position.x < OFF_SCREEN:
+	if von.global_position.x < get_viewport_rect().position.x:
 		queue_free()
 
 func on_screen_exited() -> void: #esta senial no siempre se emite o recibe, va a depender si esta renderizando o no la pantalla..
-	queue_free()
-
+	#queue_free()
+	pass
 
 func _on_plane_died() -> void:
 	set_process(false)
